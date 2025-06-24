@@ -5,7 +5,7 @@ body {
   justify-content: center;
   align-items: center;
   /* Degradado animado en tonos malva claro */
-  background: linear-gradient(270deg, white, #D8B4E2, #E6C2F0, #D8B4E2);
+  background-color:Black;
   background-size: 400% 400%;
   animation: gradientBG 15s ease infinite;
   font-family: 'Arial', sans-serif;
