@@ -4,13 +4,13 @@ body {
   height: 100vh;
   justify-content: center;
   align-items: center;
-  /* Degradado animado en tonos malva claro */
-  background-color:Black;
+  background-color: #E0B0FF; /* Malva clarito agradable */
   background-size: 400% 400%;
   animation: gradientBG 15s ease infinite;
   font-family: 'Arial', sans-serif;
   margin: 0;
 }
+
 
 @keyframes gradientBG {
   0% {
