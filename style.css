@@ -1,10 +1,11 @@
+
 body {
   display: flex;
   height: 100vh;
   justify-content: center;
   align-items: center;
-  /* Degradado animado en tonos malva */
-  background-color:  #E0B0FF;
+  /* Degradado animado en tonos malva claro */
+  background: linear-gradient(270deg, #E0B0FF, #D8B4E2, #E6C2F0, #D8B4E2);
   background-size: 400% 400%;
   animation: gradientBG 15s ease infinite;
   font-family: 'Arial', sans-serif;
@@ -12,9 +13,15 @@ body {
 }
 
 @keyframes gradientBG {
-  0% {background-position: 0% 50%;}
-  50% {background-position: 100% 50%;}
-  100% {background-position: 0% 50%;}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .heart {
