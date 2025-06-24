@@ -1,0 +1,107 @@
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: #ffe6e6;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+}
+
+.heart {
+  position: relative;
+  width: 200px;
+  height: 180px;
+  background: red;
+  transform: rotate(-45deg);
+  animation: pulse 1.5s infinite, glow 3s ease-in-out infinite;
+  margin: 0 auto;
+  z-index: 0;
+  box-shadow: 0 0 20px 5px rgba(255, 0, 0, 0.7);
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px 5px rgba(255, 0, 0, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 40px 10px rgba(255, 100, 100, 1);
+  }
+}
+
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 180px;
+  background: red;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.heart::before {
+  top: -100px;
+  left: 0;
+}
+
+.heart::after {
+  top: 0;
+  right: -100px;
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  color: white;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 5px 10px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  background: rgba(0,0,0,0.2);
+  border-radius: 8px;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: rotate(-45deg) scale(1); }
+  50% { transform: rotate(-45deg) scale(1.1); }
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fad0c4, #ff9a9e);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+.message {
+  position: fixed;       /* fija el texto en la ventana */
+  top: 20px;             /* a 20px del borde superior */
+  left: 50%;             /* centrado horizontal */
+  transform: translateX(-50%); /* para centrar exactamente */
+  font-size: 2.5em;      /* texto grande */
+  font-weight: bold;
+  color: #ff4d6d;
+  text-shadow: 1px 1px 2px #800020;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  pointer-events: none;  /* para que no interfiera con clicks */
+  user-select: none;     /* para que no se pueda seleccionar */
+  z-index: 1000;         /* que esté encima de todo */
+  text-align: center;
+  width: 90%;            /* para que no se corte en pantallas pequeñas */
+}
